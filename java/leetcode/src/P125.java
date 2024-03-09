@@ -8,12 +8,12 @@ public class P125 {
         int right = s.length() - 1;
         while (left < right) {
             char l = s.charAt(left);
-            if (l < 'A' || l > 'z') {
+            if (!Character.isLetterOrDigit(l)) {
                 left++;
                 continue;
             }
             char r = s.charAt(right);
-            if (r < 'A' || r > 'z') {
+            if (!Character.isLetterOrDigit(r)) {
                 right--;
                 continue;
             }
